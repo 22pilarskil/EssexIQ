@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '=to72m(*^29ptwo1j(@u7759v31)13k(8tr(0emz6-5sg$9_l_'
-EASY_MAPS_GOOGLE_KEY = 'AIzaSyBu9iUnH5dSZFHAhk1_EHHjwNVhpCnL8cE'
+GOOGLE_MAPS_API_KEY = 'AIzaSyBu9iUnH5dSZFHAhk1_EHHjwNVhpCnL8cE'
 EASY_MAPS_CENTER = (40.720495, -74.315600)
 STATIC_URL = '/static/'
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'easy_maps',
+    'django_google_maps',
     'corsheaders',
     'home',
 

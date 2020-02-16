@@ -2853,32 +2853,29 @@ function setCookie(cname, cvalue, login=true) {
 				<!-- Section-header -->
 				
 				<div class="section-header text-center">
-                    <h2 class="title">Get in touch</h2>
+                    <h2 class="title">Get in toucha</h2>
                 </div>
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyATg_isuGSCHIlJamrxAXfkFDTYhIz7ytM&amp;language=ru&amp;callback=initialize_map_1" async="" defer="">
-    var initialize_map_1 = function() {
-        var latlng = new google.maps.LatLng(56.838926, 60.605702);
-        var mapElem = document.getElementById("map-canvas-1");
+                <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100px;
+      }
+    </style>
+     <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu9iUnH5dSZFHAhk1_EHHjwNVhpCnL8cE&callback=initMap"
+    async defer></script>
+      
 
-        
-            var mapOptions = {
-                zoom: 16,
-                center: latlng,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-        
-
-        var map = new google.maps.Map(mapElem, mapOptions);
-
-        
-            var marker = new google.maps.Marker({
-                position: latlng,
-                map: map,
-                title: "Ekaterinburg, Mira 33"
-            });
-        
-    };
-  </script>
                 <div class="clearfix">
   <p>
   Note: If you are interested in joining, the only requirement is that you attend Millburn High School! We are always looking for new faces and ideas, and we welcome anyone who wants to apply. To get on our radar, contact us using the information provided below, and we will email you sign ups for interviews in late spring. We hope to see you then!</p>
