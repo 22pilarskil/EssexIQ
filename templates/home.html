@@ -2391,11 +2391,6 @@ header {
 		<!-- Nav -->
 		<nav id="nav" class="navbar nav-transparent">
 			<div class="navbar-brand">
-						<a href="">
-							{% load static %}
-							<img src="{% static 'images/Logo.png' %}" alt="logo" width="100" height="70" style="margin-top:-5px">
-
-						</a>
 					</div>
 			<div class="container">
 
@@ -2543,13 +2538,10 @@ function setCookie(cname, cvalue, login=true) {
   </script>
 				<ul class="main-nav nav navbar-nav navbar-right" id="yeetyeet" >
 					<li><a href="#home">Home</a></li>
-					<li><a href="#about">About the Website</a></li>
-					<li><a href="#Scouting">Scouting</a></li>
-					<li><a href="#Resources">Resources</a></li>
-					<li><a href="#tea">Outreach</a></li>
-					<li><a href="#team">Team</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a id = "signin">Sign in With Google </a></li>
+					<li><a href="#curriculum">Curriculum</a></li>
+					<li><a href="#mapa">Where Are We?></a></li>
+					<li><a href="#team">Who Are We?></a></li>
+					<li><a href="#contact">Sign Up</a></li>
 				</ul>
 				<!-- /Main navigation -->
 
@@ -2564,13 +2556,13 @@ function setCookie(cname, cvalue, login=true) {
 					<!-- home content -->
 					<div class="col-md-10 col-md-offset-1">
 						<div class="home-content">
-							<h1 class="white-text">Millburn Robotics</h1>
-							<p class="white-text"> Accurate Build + Code + Scouting Information at your Fingertips, 
+							<h1 class="white-text">EssexIQ</h1>
+							<p class="white-text">A programming and engineering summer camp designed to provide
 							</p>
-							<p class="white-text"> completely coded from scratch with the Django Web Framework, with mobile support coming soon!
+							<p class="white-text"> an engaging education free of charge
 							</p>
 							<br></br>
-							<p class="white-text"> Vote for our website <a href=https://challenges.robotevents.com/challenge/106/entry/7635>here</a> to help us win a ticket to worlds!</p>
+							<p class="white-text"> Learn more about our program below!
 							</p>
 						</div>
 					</div>
@@ -2585,75 +2577,10 @@ function setCookie(cname, cvalue, login=true) {
 	<!-- /Header -->
 
 	<!-- About -->
-	<div id="about" class="section md-padding">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section header -->
-				<div class="section-header text-center">
-					<h2 class="title">VEX. Simplified.</h2>
-				</div>
-				<!-- /Section header -->
-
-				<!-- about -->
-				<div class="col-md-4">
-					<div class="about">
-						<h3>Build + Code Advice</h3>
-						<p>Using the Millburn Robotics resources page, one can find extremely helpful build and code advice. Throughout our organization's long history with VEX, we have accumulated a vast repository of experience and knowledge. These tips provided the edge that won us the world championship during the VEX 18-19 Turning Point Season, and we think its time we shared them with other teams to improve the VEX community in any way we can. </p>
-					</div>
-				</div>
-				<!-- /about -->
-				<style>
-					strong {
-						font-weight:bold;
-						color:black;
-					}
-				</style>
-				<div class="col-md-4">
-					<div class="about">
-						<h3>Scouting</h3>
-						<p>Our Website has a deeply immersive scouting platform built for all teams to use. It is comprised of two parts. 
-							<p> Team Rankings: Each team will be ranked based on a custom made AI algorithm that uses current and past match data to rank teams based on how well they can work with their alliance, how well they can defend, and how strong their offense is. Ultimately, it is a powerful tool that has helped us at all of our competitions and we hope that it becomes a staple of scouting in the future. 
-							</p> Team Breakdown: In the Team Breakdown section of our website, teams can add personalized notes for every team they encounter. This allows them to organize any important observations they may have while scouting that may be important during alliance selection, providing another layer of efficiency to our scouting platform. </p>
-					</div>
 	
-
-				<!-- about -->
-				<!-- /about -->
-
-				<!-- about -->
-				<!-- /about -->
-			</div>
-						<div class="col-md-4">
-					<div class="about">
-						<h3>Outreach</h3>
-						<p>Another major part of our program is outreach. In addition to providing build and code advice and an immersive scouting platform, we do our best to be as involved in our community as possible. Millburn Robotics is behind many different programs that have increased awareness of STEM around our town and even the county. We hope that we can start a trend of community service that will have ripple effects for years to come. </p>
-					</div>
-				</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /About -->
-
-
-
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Service -->
 	<style>
         .teamPhoto {
-            background-image: url('{% static 'images/millburnteamphoto.jpg' %}');
+            background-image: url('{% static 'images/Logo.png' %}');
             background-size: auto;
             height:300px;
             width: 400px;
@@ -2677,7 +2604,7 @@ function setCookie(cname, cvalue, login=true) {
      padding-right: 50px;
 }
     </style>
-    <div id="Scouting" class="section md-padding" style="margin-top:-200px">
+    <div id="curriculum" class="section md-padding" style="margin-top:100px">
 
         <!-- Container -->
         <div class="container">
@@ -2690,101 +2617,14 @@ function setCookie(cname, cvalue, login=true) {
                 <!-- Section header -->
                             <!-- Section-header -->
                 <div class="section-header text-center">
-                    <h2 class="title">Scouting</h2>
+                    <h2 class="title">Curriculum</h2>
                 </div>
 <div class="clearfix">
-  <p>
-  Scouting is a extremely important part of robotics. However, it is very time consuming and requires extensive research. In an effort to make Scouting easier for all teams involved in VEX, we at Millburn Robotics have built a scouting platform comprised of two parts. Team Rankings uses an AI algorithm to rank all teams by several key characterisitcs calculated by VexDB. It has been trained on years of passed data, and has been statistically shown to be able to predict how well teams will perform in qualifications and elimination rounds, producing results very close to the actual bracket. Team Breakdown provides key insight onto the gameplay of the teams by providing a location for scouters to record observations in an easy and efficient manner. As a result, alliances will know how to work with each other long before the starting horn of their matches.</p>
-  <br></br>
-  <center>
-   <a href = "/rankings"><button class="main-btn">Team Rankings</button></a>
-    <a href = "/teamBreakdown"><button class="main-btn">Team Breakdown</button></a>
-    </center>
-</div>
-
-
-
-                <!-- /team -->
-
-            </div>
-            <!-- /Row -->
-
-        </div>
-        <!-- /Container -->
-
-    </div>
-
-        <div id="Resources" class="section md-padding" style="margin-top:-200px">
-
-        <!-- Container -->
-        <div class="container">
-
-            <!-- Row -->
-            <div class="row">
-
-
-
-                <!-- Section header -->
-                            <!-- Section-header -->
-                <div class="section-header text-center">
-                    <h2 class="title">Resources</h2>
-                </div>
-<div class="clearfix">
-  <p>
-  Millburn Robotics has over 10 years of VEX Experience. Throughout this time frame, we have learned several important tips that have been passed down from alumni to upcoming freshman for years. We want to share these helpful tips with others and therefore have dedicate an entire seciton of our website to helpful tips and advice.</p>
-  <br></br>
-  <center>
-   <a href = "/resources"><button class="main-btn">Resources</button></a>
-    </center>
-</div>
-
-
-
-                <!-- /team -->
-
-            </div>
-            <!-- /Row -->
-
-        </div>
-        <!-- /Container -->
-
-    </div>
-     <div id="tea" class="section md-padding" style="margin-top:-200px">
-
-        <!-- Container -->
-        <div class="container">
-
-            <!-- Row -->
-            <div class="row">
-
-
-
-                <!-- Section header -->
-                            <!-- Section-header -->
-                <div class="section-header text-center">
-                    <h2 class="title">Outreach</h2>
-                </div>
-<div class="clearfix">
-  <p>
-  Millburn Robotics is very involved in the community. Through the Millburn Splash program, in which volunteers from our robotics teams spend hours of their weekends instructing middle schoolers how to create robots with VexIQ pieces, we are able to train young students in the basics of robotics and programming principles. Not only do they learn valuable skills, but these students will eventually feed into the MHS Robotics program upon entering the high school, providing a sustainable source of participation that will keep this organization thriving for years to come.</p>
-  <br></br>
-  <img src='{% static "images/splash1.jpg" %}' style="width:49%;" alt="My image"/>
-  <img src='{% static "images/splash2.jpg" %}' style="width:49%;" alt="My image"/>
-  <br></br>
-   <a style="display: flex; justify-content: center;" href = "https://splash.hackmhs.com/"><button class="main-btn">MHS Splash Website and Signup</button></a>
-  <br></br>
-  <p>
-  Another initiative led by students at Millburn High School is the annual HackMHS program. HackMHS is a hackathon like many others hosted around the country, but it is funded and organized exclusively by Millburn High School students. Many of the skills learned in robotics transfer over to this event, such as using hardware and programming skills in innovative ways to produce something new and exciting. This year will be the sixth in a series of highly successful years of operation. Skills learned in robotics make MHS STEM students the best candidates to lead such a program and teach aspiring engineers and programmers the basics of using technology for good. All in all, HackMHS is an especially bright spot in the Millburn STEM community.</p>
-  <br></br>
-  <img src='{% static "images/hackmhs1.jpg" %}' style="width:49%;" alt="My image"/>
-  <img src='{% static "images/hackmhs2.jpg" %}' style="width:49%;" alt="My image"/>
-  <br></br>
-  <a style="display: flex; justify-content: center;" href = "http://hackmhs.com/"><button class="main-btn">HackMHS Website and Signup</button></a>
-  <br></br>
-  <p>
-  In addition to the above two projects, we have a third outreach program that is currently in the process of being developed and that will take place annually starting the summer of 2020. Millburn Splash has been a huge success, but we wanted to expand its reach from just our town. The EssexIQ initiative takes place in Essex County, New Jersey, and is targeted towards kids who might not be able to afford other robotics programs. Similar to Millburn Splash, basic STEM principles will be taught to our students, but the major difference is that it will be fully non-profit, with students being able to attend free of charge. We have worked hard to secure donors and sponsors to make this vision succeed, and we can't wait to see the impact it will have. </p>
-  <br></br>
-  <center><img src='{% static "images/EssexIQ.png" %}' style="width:25%;" alt="My image"/>
+  <center><p>
+  	As members of the Millburn Robotics Program (winners of the VEX Robotics 2018-2019 Season World Championship as well as recipients of numerous awards), we have accumulated a lot of experience in the fields of programming and engineering. We plan to share this knowledge with all attendees in an immersive, 3 week program that will go over engineering concepts, such as gear ratios and mechanical advantage, as well as programming concepts, such as functions, loops, and much more. We will be working with parts from VexIQ to apply these concepts into a working robot. Towards the tail end of the program, they will be used in a competitive tournament to showcase all of the skills picked up during time at camp. While working towards this goal, we will also be providing basic supplementary education in other fields such as AI or website development. At EssexIQ, we have a very diverse team that is experienced in all these subjects, and we are confident in our ability to provide an important and valuable education that we hope will propel attendees to pursue careers in S.T.E.M.
+  </p><center>
+  	<br></br>
+  <center><p>For a more detailed summary of the curriculum, check out our complete curriculum document <a href="https://docs.google.com/document/d/1MDKRUVdJvzIWHM10wAC39qTQqg9xuJdelVw2XFKVkl8/edit?usp=sharing">here</a></p></center>
   <br></br>
 </div>
 
@@ -2799,8 +2639,7 @@ function setCookie(cname, cvalue, login=true) {
         <!-- /Container -->
 
     </div>
-    <!-- Team -->
-    <div id="team" class="section md-padding" style="margin-top:-200px">
+     <div id="mapa" class="section md-padding" style="margin-top:-200px">
 
         <!-- Container -->
         <div class="container">
@@ -2813,15 +2652,31 @@ function setCookie(cname, cvalue, login=true) {
                 <!-- Section header -->
                             <!-- Section-header -->
                 <div class="section-header text-center">
-                    <h2 class="title">Our Teams</h2>
+                    <h2 class="title">Where Are We?</h2>
                 </div>
 <div class="clearfix">
-  <img class="img2" src="{% static 'images/millburnteamphoto.jpg' %}" alt="Pineapple" width="500" height="300">
-  <p class = "stuff">
-  Millburn Robotics belongs to the Millburn robotics organization located in Millburn, New Jersey. This club has four groups- 7405N, 7405M, 7405K and 7405P- that all work together at Millburn. The organization has over 100 students and dozens of mentors and volunteers. Pictured below are all four teams right after all qualifying at the same competition (2 finalists, 1 skills champion, 1 excellence award). Pictured to the right are all the teams. Click the following button to learn more about the VEX-World Winning organization.</p>
+	<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+	#map {
+        height: 400px;
+        width: 400px;
+      }
+    </style>
+     <center><div id="map"></div></center>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu9iUnH5dSZFHAhk1_EHHjwNVhpCnL8cE&callback=initMap"
+    async defer></script>
+ 
   <br></br>
-   <a class = "stuff" href = "/teamDetails"><button class="main-btn">Team Details and Media</button></a>
-   
 </div>
 
 
@@ -2835,12 +2690,7 @@ function setCookie(cname, cvalue, login=true) {
         <!-- /Container -->
 
     </div>
-   
-
-	{% if submitted %}
-	<script>alert("Thank you for reaching out to us!")</script>
-	{% endif %}
-
+       
 	<!-- Contact -->
 	<div id="contact" class="section md-padding" style="margin-top:-200px">
 
@@ -2853,27 +2703,8 @@ function setCookie(cname, cvalue, login=true) {
 				<!-- Section-header -->
 				
 				<div class="section-header text-center">
-                    <h2 class="title">Get in toucha</h2>
+                    <h2 class="title">Get in touch</h2>
                 </div>
-                <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100px;
-      }
-    </style>
-     <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu9iUnH5dSZFHAhk1_EHHjwNVhpCnL8cE&callback=initMap"
-    async defer></script>
       
 
                 <div class="clearfix">
