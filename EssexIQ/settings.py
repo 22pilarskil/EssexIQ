@@ -25,7 +25,7 @@ GOOGLE_MAPS_API_KEY = 'AIzaSyBu9iUnH5dSZFHAhk1_EHHjwNVhpCnL8cE'
 EASY_MAPS_CENTER = (40.720495, -74.315600)
 STATIC_URL = '/static/'
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
