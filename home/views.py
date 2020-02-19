@@ -25,7 +25,7 @@ def sendEmail(request):
 	password = "millburn123"
 	msg = "\nEmail: "+email+", Message: "+message
 	print(msg)
-	os.chdir("/Users/"+getpass.getuser())
+	os.chdir("/root")
 	file = open("messages.txt", 'a+')
 	file.write(msg)
 	file.close()
