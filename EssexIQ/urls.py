@@ -19,5 +19,6 @@ from home.views import *
 
 urlpatterns = [
     path('', homeView),
+    path('sendmail', sendEmail)
 ]
 

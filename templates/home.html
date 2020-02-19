@@ -1,5 +1,4 @@
 {% load static %}
-{% load easy_maps_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -728,11 +727,6 @@ a:hover, a:focus {
     color: #FFF;
 }
 
-ul, ol {
-    margin: 0;
-    padding: 0;
-    list-style: none
-}
 
 /* -- section  -- */
 
@@ -2383,7 +2377,7 @@ header {
 	<!-- Header -->
 	<header id="home">
 		<!-- Background Image -->
-		<div class="bg-img" style="background-image: url('{% static 'images/millburnteamphoto.jpg' %}');">
+		<div class="bg-img" style="background-image: url('{% static 'images/welcome.png' %}');">
 			<div class="overlay"></div>
 		</div>
 		<!-- /Background Image -->
@@ -2539,9 +2533,11 @@ function setCookie(cname, cvalue, login=true) {
 				<ul class="main-nav nav navbar-nav navbar-right" id="yeetyeet" >
 					<li><a href="#home">Home</a></li>
 					<li><a href="#curriculum">Curriculum</a></li>
-					<li><a href="#mapa">Where Are We?></a></li>
-					<li><a href="#team">Who Are We?></a></li>
+					<li><a href="#logistics">Logistics</a></li>
+					<li><a href="#mapa">Where Are We?</a></li>
+					<li><a href="#team">Who Are We?</a></li>
 					<li><a href="#contact">Sign Up</a></li>
+					<li><a href="#questions">Ask us a question!</a></li>
 				</ul>
 				<!-- /Main navigation -->
 
@@ -2612,6 +2608,7 @@ function setCookie(cname, cvalue, login=true) {
             <!-- Row -->
             <div class="row">
 
+            	<center><img src='{% static "images/Logo.png" %}' alt="EssexIQ Logo" class="profile" style="margin-bottom:50px;"></center>
 
 
                 <!-- Section header -->
@@ -2626,6 +2623,44 @@ function setCookie(cname, cvalue, login=true) {
   	<br></br>
   <center><p>For a more detailed summary of the curriculum, check out our complete curriculum document <a href="https://docs.google.com/document/d/1MDKRUVdJvzIWHM10wAC39qTQqg9xuJdelVw2XFKVkl8/edit?usp=sharing">here</a></p></center>
   <br></br>
+</div>
+
+
+
+                <!-- /team -->
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <div id="logistics" class="section md-padding" style="margin-top:-250px">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+
+
+                <!-- Section header -->
+                            <!-- Section-header -->
+                <div class="section-header text-center">
+                    <h2 class="title">Logistics</h2>
+                </div>
+<div class="clearfix">
+  	<center><ul style="width:70%;text-align:left;">
+  		<li>First and foremost, all services free of charge!</li>
+  		<li>EssexIQ is a three week program that lasts from June 29th to July 17th</li>
+  		<li>Camp will begin 9:00 AM and end at 3:00 AM every day</li>
+  		<li>We will be hosting EssexIQ at Millburn High School in our S.T.E.M. lab, the MILL</li>
+  		<li>Busing to Millburn High School will be available from in front of Sussex Ave School complimentary to all students attending the program. A member of our team as well as an adult mentor will acompany students to Millburn</li>
+  		<li>Free lunch of pizza and chips will be provided. If you would prefer something different, we will see what we can do, but it may not be complimentary</li>
+  	</ul></center>
+  	<br></br>
 </div>
 
 
@@ -2659,8 +2694,8 @@ function setCookie(cname, cvalue, login=true) {
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 	#map {
-        height: 400px;
-        width: 400px;
+        height: 800px;
+        width: 800px;
       }
     </style>
      <center><div id="map"></div></center>
@@ -2690,6 +2725,63 @@ function setCookie(cname, cvalue, login=true) {
         <!-- /Container -->
 
     </div>
+    <style>
+    	.profile {
+    		width:300px;
+    		height:300px;
+    	}
+    	.names {
+    		margin-top:40px;
+    	}
+    </style>
+    <div id="team" class="section md-padding" style="margin-top:-200px;">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">Who Are We?</h2>
+				</div>
+				<!-- /Section header -->
+
+				<!-- team -->
+				<div class="col-sm-4">
+					<div class="team">
+
+						<div class="team-content">
+							<img src='{% static "images/Aryan.png" %}' alt="Aryan" class="profile">
+							<h3 class="names">Aryan Dugar</h3>
+							<span>1 year as captain and head coder of Millburn Team 7405N, 3 years total of robotics experience</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="team">
+
+						<div class="team-content">
+							<img src='{% static "images/Keshab.png" %}' alt="Keshab" class="profile">
+							<h3 class="names">Keshab Gatehouse</h3>
+							<span>2 years as captain and head builder of Millburn Team 7405N, 5 years total of robotics experience</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="team">
+
+						<div class="team-content">
+							<img src='{% static "images/Liam.png" %}' alt="Liam" class="profile">
+							<h3 class="names">Liam Pilarski</h3>
+							<span>Head of Millburn AI initiative, 2 years of robotics experience, head web developer of Millburn Team 7405N</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
        
 	<!-- Contact -->
 	<div id="contact" class="section md-padding" style="margin-top:-200px">
@@ -2703,15 +2795,72 @@ function setCookie(cname, cvalue, login=true) {
 				<!-- Section-header -->
 				
 				<div class="section-header text-center">
-                    <h2 class="title">Get in touch</h2>
+                    <h2 class="title">Sign Up</h2>
                 </div>
       
 
                 <div class="clearfix">
-  <p>
-  Note: If you are interested in joining, the only requirement is that you attend Millburn High School! We are always looking for new faces and ideas, and we welcome anyone who wants to apply. To get on our radar, contact us using the information provided below, and we will email you sign ups for interviews in late spring. We hope to see you then!</p>
+  <center><p>
+  Fill out the Google Form below to show us you're interested!</p></center>
   <br></br>
+  <style>
+  	#googleform {
+  		border-color: #2196F3!important;
+  		color: #000!important;
+  		background-color: #e1c6f7!important;
+  		border-left: 6px solid #7c13d4!important;
+  		width:660px;
+  		height:520px;
+  		align-content: center;
+  		margin-bottom:50px;
+  	}
+  </style>
+  <center><div id="googleform"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc6itsqis5Q_DzhZL8EMnk4Fa4Ecpxhj-JzNaD4oJWBjbjIUw/viewform?embedded=true" style="margin-top:10px;" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div></center>
 </div>
+{% if submitted %}
+<script>
+	alert("Thanks for submitting a comment! We will respond to you as soon as possible!")
+	window.location.replace('/')
+</script>
+{% endif %}
+<div id="questions" class="section md-padding" style="margin-bottom:-50px;">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+
+
+                <!-- Section header -->
+                            <!-- Section-header -->
+                <div class="section-header text-center">
+                    <h2 class="title">Ask Us a Question!</h2>
+                </div>
+                <center><p style="width:70%;">If you have any questions or concerns (i.e. problems with signing up via the google form, needing clarification on camp info, etc.), feel free to fill out this form. Enter your email and message below so we can respond to you promptly</p>
+                <br>
+                <br>
+                <form action="/sendmail" method="post" class="resize" id="contactform"> {% csrf_token %}
+							<input type="text" name="username" placeholder="Email" style="width:70%;margin-bottom:10px">
+							<br>
+							<textarea name="message" rows='5' form="contactform" style="width:70%" placeholder="Enter your message here" ></textarea>
+							<br>
+							<input class="main-btn" type="submit" value="Send message">
+						</form>
+
+				</center>
+
+
+                <!-- /team -->
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
                 <!-- /Section-header -->
 
                 <!-- contact -->
@@ -2719,7 +2868,7 @@ function setCookie(cname, cvalue, login=true) {
                     <div class="contact">
                         <i class="fa fa-phone"></i>
                         <h3>Phone</h3>
-                        <p>908-858-0369</p>
+                        <p>917-923-8041</p>
                     </div>
                 </div>
                 <!-- /contact -->
@@ -2759,12 +2908,6 @@ function setCookie(cname, cvalue, login=true) {
 
 	</div>
 	<!-- /Contact -->
-
-	<div class="clearfix">
-  <center><p style="width:1000px;">
-  Special thanks to David Farrell and Hilton Seibert, our two amazing mentors that have helped us all year and every year by being there through our successes and our failures. We couldn't have accomplished any of the things that we did without their encouragement, guidance and utmost dedication to our success. This website is dedicated to them and all the hardwork they put into helping us win, but mostly just for dealing with us.</p></center>
-  <br></br>
-</div>
 
 
 
