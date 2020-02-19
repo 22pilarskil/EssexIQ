@@ -2534,8 +2534,8 @@ function setCookie(cname, cvalue, login=true) {
 					<li><a href="#home">Home</a></li>
 					<li><a href="#curriculum">Curriculum</a></li>
 					<li><a href="#logistics">Logistics</a></li>
-					<li><a href="#mapa">Where Are We?</a></li>
-					<li><a href="#team">Who Are We?</a></li>
+					<li><a href="#mapa">Find Us</a></li>
+					<li><a href="#team">Our Team</a></li>
 					<li><a href="#contact">Sign Up</a></li>
 					<li><a href="#questions">Ask us a question!</a></li>
 				</ul>
@@ -2618,10 +2618,10 @@ function setCookie(cname, cvalue, login=true) {
                 </div>
 <div class="clearfix">
   <center><p>
-  	As members of the Millburn Robotics Program (winners of the VEX Robotics 2018-2019 Season World Championship as well as recipients of numerous awards), we have accumulated a lot of experience in the fields of programming and engineering. We plan to share this knowledge with all attendees in an immersive, 3 week program that will go over engineering concepts, such as gear ratios and mechanical advantage, as well as programming concepts, such as functions, loops, and much more. We will be working with parts from VexIQ to apply these concepts into a working robot. Towards the tail end of the program, they will be used in a competitive tournament to showcase all of the skills picked up during time at camp. While working towards this goal, we will also be providing basic supplementary education in other fields such as AI or website development. At EssexIQ, we have a very diverse team that is experienced in all these subjects, and we are confident in our ability to provide an important and valuable education that we hope will propel attendees to pursue careers in S.T.E.M.
+  	As members of the Millburn Robotics Program (winners of the VEX Robotics 2018-2019 Season World Championship as well as recipients of numerous awards), we have accumulated a lot of experience in the fields of programming and engineering. We plan to share this knowledge with all attendees in an immersive, 3 week program that will go over engineering concepts, such as gear ratios and mechanical advantage, as well as programming concepts, such as functions, loops, and much more. We will be working with parts from VexIQ to apply these concepts into a working robot. Towards the tail end of the program, they will be used in a competitive tournament to showcase all of the skills picked up during time at camp. While working towards this goal, we will also be providing basic supplementary education in other fields such as AI or website development- as a matter of fact, this website is coded from scratch by instructors that you will meet in the summer! At EssexIQ, we have a very diverse team that is experienced in all these subjects, and we are confident in our ability to provide an important and valuable educational opportunity that we hope will propel attendees to pursue careers in S.T.E.M.
   </p><center>
   	<br></br>
-  <center><p>For a more detailed summary of the curriculum, check out our complete curriculum document <a href="https://docs.google.com/document/d/1MDKRUVdJvzIWHM10wAC39qTQqg9xuJdelVw2XFKVkl8/edit?usp=sharing">here</a></p></center>
+  <center><p>For a more detailed summary of the curriculum, check out our complete curriculum document <a href="https://docs.google.com/document/d/1MDKRUVdJvzIWHM10wAC39qTQqg9xuJdelVw2XFKVkl8/edit?usp=sharing">here</a>!</p></center>
   <br></br>
 </div>
 
@@ -2687,15 +2687,16 @@ function setCookie(cname, cvalue, login=true) {
                 <!-- Section header -->
                             <!-- Section-header -->
                 <div class="section-header text-center">
-                    <h2 class="title">Where Are We?</h2>
+                    <h2 class="title">Find Us</h2>
                 </div>
 <div class="clearfix">
+	<center><p>We are located at 462 Millburn Ave, Millburn, NJ 07041. Use the map below to see exactly where that is!</p></center>
+	<br>
 	<style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 	#map {
-        height: 800px;
-        width: 800px;
+        width: 80%;
       }
     </style>
      <center><div id="map"></div></center>
@@ -2706,6 +2707,8 @@ function setCookie(cname, cvalue, login=true) {
           center: {lat: 40.720582, lng: -74.315707},
           zoom: 15
         });
+        var cw = $('#map').width();
+		$('#map').css({'height':cw+'px'});
         var marker = new google.maps.Marker({
         position: {lat: 40.720582, lng: -74.315707},
         map: map,
@@ -2749,8 +2752,11 @@ function setCookie(cname, cvalue, login=true) {
 
 				<!-- Section header -->
 				<div class="section-header text-center">
-					<h2 class="title">Who Are We?</h2>
+					<h2 class="title">Our Team</h2>
 				</div>
+				<br>
+				<center><p>We will be the main instructors for this summer's session. Below are short bios about each of us so you can get to know us better!</p></center>
+					<br>
 				<!-- /Section header -->
 
 				<!-- team -->
@@ -2760,7 +2766,7 @@ function setCookie(cname, cvalue, login=true) {
 						<div class="team-content">
 							<img src='{% static "images/Aryan.png" %}' alt="Aryan" class="profile">
 							<h3 class="names">Aryan Dugar</h3>
-							<span>1 year as captain and head coder of Millburn Team 7405N, 3 years total of robotics experience</span>
+							<span>1 year as captain and head coder of Millburn Team 7405N, 3 years total of robotics experience, class of 2022 at Millburn High School</span>
 						</div>
 					</div>
 				</div>
@@ -2770,7 +2776,7 @@ function setCookie(cname, cvalue, login=true) {
 						<div class="team-content">
 							<img src='{% static "images/Keshab.png" %}' alt="Keshab" class="profile">
 							<h3 class="names">Keshab Gatehouse</h3>
-							<span>2 years as captain and head builder of Millburn Team 7405N, 5 years total of robotics experience</span>
+							<span>2 years as captain and head builder of Millburn Team 7405N, 5 years total of robotics experience, class of 2021 at Millburn High School</span>
 						</div>
 					</div>
 				</div>
@@ -2780,7 +2786,7 @@ function setCookie(cname, cvalue, login=true) {
 						<div class="team-content">
 							<img src='{% static "images/Liam.png" %}' alt="Liam" class="profile">
 							<h3 class="names">Liam Pilarski</h3>
-							<span>Head of Millburn AI initiative, 2 years of robotics experience, head web developer of Millburn Team 7405N</span>
+							<span>Head of Millburn AI initiative, 2 years of robotics experience, head web developer of Millburn Team 7405N, class of 2022 at Millburn High School</span>
 						</div>
 					</div>
 				</div>
@@ -2843,7 +2849,7 @@ function setCookie(cname, cvalue, login=true) {
                 <div class="section-header text-center">
                     <h2 class="title">Ask Us a Question!</h2>
                 </div>
-                <center><p style="width:70%;">If you have any questions or concerns (i.e. problems with signing up via the google form, needing clarification on camp info, etc.), feel free to fill out this form. Enter your email and message below so we can respond to you promptly</p>
+                <center><p style="width:70%;">If you have any questions or concerns (i.e. problems with signing up via the google form, needing clarification on camp info, etc.), feel free to fill out this contact window. Enter your email and message below so we can respond to you promptly, or just email us directly at <a href="mailto:millburnvexrobotics@gmail.com">millburnvexrobotics@gmail.com</a>.</p>
                 <br>
                 <br>
                 <form action="/sendmail" method="post" class="resize" id="contactform"> {% csrf_token %}
