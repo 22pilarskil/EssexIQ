@@ -2703,12 +2703,17 @@ function setCookie(cname, cvalue, login=true) {
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+          center: {lat: 40.720582, lng: -74.315707},
+          zoom: 15
         });
+        var marker = new google.maps.Marker({
+        position: {lat: 40.720582, lng: -74.315707},
+        map: map,
+        title: "Millburn High School",
+    	});
       }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu9iUnH5dSZFHAhk1_EHHjwNVhpCnL8cE&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTl5duKgprdCZgkBLK0GYLtLQqjQ86qhc&callback=initMap"
     async defer></script>
  
   <br></br>
