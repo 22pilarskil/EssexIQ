@@ -15,6 +15,9 @@
 		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		if (isMobile) alert("Note: interactive components of website will be harder to use on mobile!")
 	</script>
+<script src="/lib/jquery.plugin.js"></script>
+<script src="/lib/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
 
 	<!-- Google font -->
 		<!-- Google font -->
@@ -2100,6 +2103,10 @@ header {
   color:#FFF;
 }
 
+.seventypercent {
+	width:70%;
+}
+
 .footer-copyright p {
     text-align: center;
     font-size: 14px;
@@ -2495,11 +2502,21 @@ header {
                     <h2 class="title">Curriculum</h2>
                 </div>
 <div class="clearfix">
-  <center><p>
-  	As members of the Millburn Robotics Program (winners of the VEX Robotics 2018-2019 Season World Championship as well as recipients of numerous awards), we have accumulated a lot of experience in the fields of programming and engineering. We plan to share this knowledge with all attendees in an immersive, 3 week program that will go over engineering concepts, such as gear ratios and mechanical advantage, as well as programming concepts, such as functions, loops, and much more. We will be working with parts from VexIQ to apply these concepts into a working robot. Towards the tail end of the program, they will be used in a competitive tournament to showcase all of the skills picked up during time at camp. While working towards this goal, we will also be providing basic supplementary education in other fields such as AI or website development- as a matter of fact, this website is coded from scratch by instructors that you will meet in the summer! At EssexIQ, we have a very diverse team that is experienced in all these subjects, and we are confident in our ability to provide an important and valuable educational opportunity that we hope will propel attendees to pursue careers in S.T.E.M.
+  <center><p style="width:70%;text-align:left">
+  	As members of the Millburn Robotics Program (winners of the VEX Robotics 2018-2019 Season World Championship as well as recipients of numerous awards), we have accumulated a lot of experience in the fields of programming and engineering. We plan to share this knowledge with all attendees in an immersive, 3 week program that will go over engineering concepts as well as programming concepts. We will be working with parts from VexIQ to apply these ideas into a working robot. Towards the tail end of the program, they will be used in a competitive tournament to showcase all of the skills picked up during time at camp. While working towards this goal, we will also be providing basic supplementary education in other fields such as AI or website development- as a matter of fact, this website is coded from scratch by instructors that you will meet in the summer! At EssexIQ, we have a very diverse team that is experienced in all these subjects, and we are confident in our ability to provide an important and valuable educational opportunity that we hope will propel attendees to pursue careers in S.T.E.M., that includes but is not limited to:
   </p><center>
-  	<br></br>
-  <center><p>For a more detailed summary of the curriculum, check out our complete curriculum document <a href="https://docs.google.com/document/d/1MDKRUVdJvzIWHM10wAC39qTQqg9xuJdelVw2XFKVkl8/edit?usp=sharing">here</a>!</p></center>
+  	<br>
+  	<br>
+  	<center><ul style="width:70%;text-align:left;">
+  		<li>Using gear ratios to acheive mechanical advantage</li>
+  		<li>Understanding friction and how to minimize its impact on a system</li>
+  		<li>Fundamental mechanisms designed to minimize the work and make efficient an array of different tasks</li>
+  		<li>Block code instruction, and depending on degree of individual success with basic concepts, written code instruction</li>
+  		<li>Using programming structures such as loops and conditionals to optimize code</li>
+  	</ul></center>
+  	<br>
+  	<br>
+  <center><p  class="seventypercent" >This is just a taste of what will be covered. For a more detailed summary of the curriculum, check out our complete curriculum document <a href="https://docs.google.com/document/d/1MDKRUVdJvzIWHM10wAC39qTQqg9xuJdelVw2XFKVkl8/edit?usp=sharing">here</a>!</p></center>
   <br></br>
 </div>
 
@@ -2568,7 +2585,7 @@ header {
                     <h2 class="title">Find Us</h2>
                 </div>
 <div class="clearfix">
-	<center><p>We are located at 462 Millburn Ave, Millburn, NJ 07041. Use the map below to see exactly where that is!</p></center>
+	<center><p  class="seventypercent" >We are located at 462 Millburn Ave, Millburn, NJ 07041. Use the map below to see exactly where that is!</p></center>
 	<br>
 	<style>
       /* Always set the map height explicitly to define the size of the div
@@ -2580,13 +2597,18 @@ header {
      <center><div id="map"></div></center>
     <script>
       var map;
+      function resizemap(){
+      	var cw = document.getElementById('map').offsetWidth;
+        console.log(cw+"px")
+        document.getElementById('map').style.height = String(cw)+"px";
+      }
+      window.onresize = resizemap
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 40.720582, lng: -74.315707},
           zoom: 15
         });
-        var cw = $('#map').width();
-		$('#map').css({'height':cw+'px'});
+		resizemap()
         var marker = new google.maps.Marker({
         position: {lat: 40.720582, lng: -74.315707},
         map: map,
@@ -2633,7 +2655,7 @@ header {
 					<h2 class="title">Our Team</h2>
 				</div>
 				<br>
-				<center><p>We will be the main instructors for this summer's session. Below are short bios about each of us so you can get to know us better!</p></center>
+				<center><p  class="seventypercent" >We will be the main instructors for this summer's session. Below are short bios about each of us so you can get to know us better!</p></center>
 					<br>
 				<!-- /Section header -->
 
@@ -2698,13 +2720,13 @@ header {
   		color: #000!important;
   		background-color: #e1c6f7!important;
   		border-left: 6px solid #7c13d4!important;
-  		width:90%;
+  		width:60%;
   		height:520px;
   		align-content: center;
   		margin-bottom:50px;
   	}
   </style>
-  <center><div id="googleform"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc6itsqis5Q_DzhZL8EMnk4Fa4Ecpxhj-JzNaD4oJWBjbjIUw/viewform?embedded=true" style="width:95%;margin-top:10px;" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div></center>
+  <center><div id="googleform"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc6itsqis5Q_DzhZL8EMnk4Fa4Ecpxhj-JzNaD4oJWBjbjIUw/viewform?embedded=true" style="width:99%;margin-top:10px;" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div></center>
 </div>
 {% if submitted %}
 <script>
@@ -2727,7 +2749,7 @@ header {
                 <div class="section-header text-center">
                     <h2 class="title">Ask Us a Question!</h2>
                 </div>
-                <center><p style="width:70%;">If you have any questions or concerns (i.e. problems with signing up via the google form, needing clarification on camp info, etc.), feel free to fill out this contact window. Enter your email and message below so we can respond to you promptly, or just email us directly at <a href="mailto:millburnvexrobotics@gmail.com">millburnvexrobotics@gmail.com</a>.</p>
+                <center><p class="seventypercent" style="text-align:left">If you have any questions or concerns (i.e. problems with signing up via the google form, needing clarification on camp info, etc.), feel free to fill out this contact window. Enter your email and message below so we can respond to you promptly, or just email us directly at <a href="mailto:millburnvexrobotics@gmail.com">millburnvexrobotics@gmail.com</a>.</p>
                 <br>
                 <br>
                 <form action="/sendmail" method="post" class="resize" id="contactform"> {% csrf_token %}
