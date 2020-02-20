@@ -2576,8 +2576,7 @@ header {
      <center><div id="map"></div></center>
     <script>
       var map;
-      $(document).ready(function () {
-      function initMap() {
+      window.onload = function () {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 40.720582, lng: -74.315707},
           zoom: 15
@@ -2590,7 +2589,6 @@ header {
         title: "Millburn High School",
     	});
       }
-      		});
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTl5duKgprdCZgkBLK0GYLtLQqjQ86qhc&callback=initMap"
     async defer></script>
