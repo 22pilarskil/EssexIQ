@@ -2482,7 +2482,7 @@ header {
             <!-- Row -->
             <div class="row">
 
-            	<center><img src='{% static "images/Logo.png" %}' alt="EssexIQ Logo" class="profile" style="margin-bottom:50px;"></center>
+            	<center><img src='{% static "images/Logo.png" %}' alt="EssexIQ Logo" class="profile" style="width:20%;margin-bottom:50px;"></center>
 
 
                 <!-- Section header -->
@@ -2576,7 +2576,7 @@ header {
      <center><div id="map"></div></center>
     <script>
       var map;
-      window.onload = function () {
+      function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 40.720582, lng: -74.315707},
           zoom: 15
