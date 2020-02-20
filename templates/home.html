@@ -11,6 +11,10 @@
 	<title>EssexIQ</title>
 	<link rel = "icon" href ='{% static "images/Logo.png" %}'  
         type = "image/x-icon"> 
+    <script type="text/javascript">
+		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		if (isMobile) alert("Note: interactive components of website will be harder to use on mobile!")
+	</script>
 
 	<!-- Google font -->
 		<!-- Google font -->
@@ -2694,13 +2698,13 @@ header {
   		color: #000!important;
   		background-color: #e1c6f7!important;
   		border-left: 6px solid #7c13d4!important;
-  		width:660px;
+  		width:90%;
   		height:520px;
   		align-content: center;
   		margin-bottom:50px;
   	}
   </style>
-  <center><div id="googleform"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc6itsqis5Q_DzhZL8EMnk4Fa4Ecpxhj-JzNaD4oJWBjbjIUw/viewform?embedded=true" style="margin-top:10px;" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div></center>
+  <center><div id="googleform"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc6itsqis5Q_DzhZL8EMnk4Fa4Ecpxhj-JzNaD4oJWBjbjIUw/viewform?embedded=true" style="width:95%;margin-top:10px;" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div></center>
 </div>
 {% if submitted %}
 <script>
