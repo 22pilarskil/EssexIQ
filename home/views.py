@@ -8,13 +8,13 @@ import getpass
 # Create your views here.
 
 def homeView(request):
-	 print("HomeView")
-	 try:
+	print("HomeView") 
+	try:
 	 	x = request.GET['submit']
 	 	return render(request, 'home.html', {"submitted": True})
-	 except KeyError:
+	except KeyError:
 	 	return render(request, 'home.html', {"submitted": False})
-
+	#return HttpResponse("website code")
 def sendEmail(request):
 	data = request.POST
 	email = str(data["username"])
