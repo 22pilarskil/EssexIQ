@@ -15,7 +15,14 @@ def homeView(request):
 	 	return render(request, 'home.html', {"submitted": True})
 	except KeyError:
 	 	return render(request, 'home.html', {"submitted": False})
-	#return HttpResponse("website code")
+
+def load_winter(request):
+	return render(request, 'winter.html', {"submitted": False})
+
+def load_summer(request):
+	return render(request, 'summer.html', {"submitted": False})
+
+
 def sendEmail(request):
 	data = request.POST
 	email = str(data["username"])
@@ -30,10 +37,4 @@ def sendEmail(request):
 	file = open("messages.txt", 'a+')
 	file.write(msg)
 	file.close()
-	'''
-	server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-	server.login(username, password)
-	server.sendmail(fromaddr, toaddrs, str(msg))
-	server.quit()
-	'''
 	return HttpResponseRedirect("/?submit=True")

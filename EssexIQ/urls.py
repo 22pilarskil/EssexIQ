@@ -19,6 +19,8 @@ from home.views import *
 
 urlpatterns = [
     path('', homeView),
-    path('sendmail', sendEmail)
+    path('sendmail', sendEmail),
+    path('winter', load_winter),
+    path('summer', load_summer),
 ]
 

@@ -851,7 +851,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 .main-btn {
-    background: #66728A;
+    background: #6195FF;
     color: #FFF;
 }
 
@@ -2381,10 +2381,7 @@ header {
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<style>
-	#switch{display: inline-block; margin-right: 20px;}
-	#inputbutton{width: 200px;}
-</style>
+
 <body>
 	<!-- Header -->
 	<header id="home">
@@ -2413,17 +2410,14 @@ header {
 				</div>
 
 				<!--  Main navigation  -->
-				<!-- /Main navigation -->
-				<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 				<ul class="main-nav nav navbar-nav navbar-right" id="yeetyeet" >
-					<li><a href="#home">Home</a></li>
-					<li><a href="#team">Our Team</a></li>
-					<li><a href="#questions">Ask Us A Question</a></li>
+					<li><a href="/">Home</a></li>
+					<li><a href="#curriculum">Curriculum</a></li>
+					<li><a href="#logistics">Logistics</a></li>
+					<li><a href="#mapa">Find Us</a></li>
 				</ul>
 				<!-- /Main navigation -->
-
-			</div>
-		</nav>
 
 			</div>
 		</nav>
@@ -2436,17 +2430,9 @@ header {
 					<!-- home content -->
 					<div class="col-md-10 col-md-offset-1">
 						<div class="home-content">
-							<h1 class="white-text">EssexIQ</h1>
-							<p class="white-text">A programming and engineering camp designed to provide an
+							<h1 class="white-text">EssexIQ Summer Session</h1>
+							<p class="white-text">07/06/20 - 07/27/20
 							</p>
-							<p class="white-text"> engaging education, free of charge!
-							</p>
-							<form action="/winter" method="post" class="resize" id="switch"> {% csrf_token %}
-								<input class="main-btn" type="submit" id="inputbutton" value="Winter Session">
-							</form>
-							<form action="/summer" method="post" class="resize" id="switch"> {% csrf_token %}
-								<input class="main-btn" type="submit" id="inputbutton" value="Summer Session">
-							</form>
 						</div>
 					</div>
 					<!-- /home content -->
@@ -2455,8 +2441,6 @@ header {
 			</div>
 		</div>
 		<!-- /home wrapper -->
-
-
 
 	</header>
 	<!-- /Header -->
@@ -2488,67 +2472,54 @@ header {
      padding-left: 100px;
      padding-right: 50px;
 }
-.profile {
-    		width:100%;
-    		height:100%;
-    	}
-    	.names {
-    		margin-top:40px;
-    	}
     </style>
 
-<div id="team" class="section md-padding" style="margin-top:0px;">
+    <center><img src='{% static "images/Logo.png" %}' alt="EssexIQ Logo" class="profile" style="width:20%;margin-top:100px;margin-bottom:-100px;"></center>
+    <div id="curriculum" class="section md-padding" style="margin-top:100px">
 
-		<!-- Container -->
-		<div class="container">
+        <!-- Container -->
+        <div class="container">
 
-			<!-- Row -->
-			<div class="row">
+            <!-- Row -->
+            <div class="row">
 
-				<!-- Section header -->
-				<div class="section-header text-center">
-					<h2 class="title">Our Team</h2>
-				</div>
-				<br>
-				<center><p  class="seventypercent" >We will be the main instructors for this summer's session. Below are short bios about each of us so you can get to know us better!</p></center>
-					<br>
-				<!-- /Section header -->
 
-				<!-- team -->
-				<div class="col-sm-4">
-					<div class="team">
+                <!-- Section header -->
+                            <!-- Section-header -->
+                <div class="section-header text-center">
+                    <h2 class="title">Curriculum</h2>
+                </div>
+<div class="clearfix">
+  <center><p style="width:70%;text-align:left">
+  	As members of the Millburn Robotics Program (winners of the VEX Robotics 2018-2019 World Championship as well as recipients of numerous awards), we have accumulated a lot of experience in the fields of programming and engineering. We plan to share this knowledge with all attendees in an immersive, 3 week program that will go over engineering concepts as well as programming concepts. We will be working with parts from the VexIQ platform to apply these ideas into working robots in teams of 2-3. Towards the tail end of the program, they will be used in a competitive tournament to showcase all of the skills picked up during time at camp. While working towards this goal, we will also be providing basic supplementary education in other fields such as AI or website development - as a matter of fact, this website is coded from scratch by instructors that you will meet in the summer! At EssexIQ, we have a very diverse team that is experienced in all these subjects, and we are confident in our ability to provide an important and valuable educational opportunity that we hope will propel attendees to pursue careers in S.T.E.M., that includes but is not limited to:
+  </p><center>
+  	<br>
+  	<br>
+  	<center><ul style="width:70%;text-align:left;">
+  		<li>Using gear ratios to acheive mechanical advantage</li>
+  		<li>Understanding friction and how to minimize its impact on a system</li>
+  		<li>Fundamental mechanisms designed to minimize the work and make efficient an array of different tasks</li>
+  		<li>Block code instruction, and depending on degree of individual success with basic concepts, written code instruction</li>
+  		<li>Using programming structures such as loops and conditionals to optimize code</li>
+  	</ul></center>
+  	<br>
+  	<br>
+  <center><p  class="seventypercent" >This is just a taste of what will be covered. For a more detailed summary of the curriculum, check out our complete curriculum document <a href="https://docs.google.com/document/d/1MDKRUVdJvzIWHM10wAC39qTQqg9xuJdelVw2XFKVkl8/edit?usp=sharing">here</a>!</p></center>
+  <br></br>
+</div>
 
-						<div class="team-content">
-							<img src='{% static "images/Aryan.png" %}' alt="Aryan" class="profile">
-							<h3 class="names">Aryan Dugar</h3>
-							<span>2 years as co-captain and head coder of Millburn Team 7405N, 3 years total of robotics experience, class of 2022 at Millburn High School</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team">
 
-						<div class="team-content">
-							<img src='{% static "images/Keshab.png" %}' alt="Keshab" class="profile">
-							<h3 class="names">Keshab Gatehouse</h3>
-							<span>3 years as co-captain and head builder of Millburn Team 7405N, 6 years total of robotics experience, class of 2021 at Millburn High School</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team">
 
-						<div class="team-content">
-							<img src='{% static "images/Liam.png" %}' alt="Liam" class="profile">
-							<h3 class="names">Liam Pilarski</h3>
-							<span>Co-lead of Millburn AI initiative, 1 year as captain and head coder of Millburn Team 7405K, class of 2022 at Millburn High School</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-<div id="questions" class="section md-padding" style="margin-bottom:-50px;">
+                <!-- /team -->
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <div id="logistics" class="section md-padding" style="margin-top:-250px">
 
         <!-- Container -->
         <div class="container">
@@ -2561,20 +2532,19 @@ header {
                 <!-- Section header -->
                             <!-- Section-header -->
                 <div class="section-header text-center">
-                    <h2 class="title">Ask Us a Question!</h2>
+                    <h2 class="title">Logistics</h2>
                 </div>
-                <center><p class="seventypercent" style="text-align:left">If you have any questions or concerns (eg. needing clarification on camp info), feel free to fill out this contact window. Enter your email and message below so we can respond to you promptly, or just email us directly at <a href="mailto:essexiq@gmail.com">essexiq@gmail.com</a>.</p>
-                <br>
-                <br>
-                <form action="/sendmail" method="post" class="resize" id="contactform"> {% csrf_token %}
-							<input type="text" name="username" placeholder="Email" style="width:70%;margin-bottom:10px">
-							<br>
-							<textarea name="message" rows='5' form="contactform" style="width:70%" placeholder="Enter your message here" ></textarea>
-							<br>
-							<input class="main-btn" type="submit" value="Send message">
-						</form>
+<div class="clearfix">
+  	<center><ul style="width:70%;text-align:left;">
+  		<li>EssexIQ is a three week program that lasts from June 29th to July 17th</li>
+  		<li>Camp will begin 9:00 AM and end at 3:00 AM on weekdays - weekends are off!</li>
+  		<li>We will be hosting EssexIQ at Millburn High School in our S.T.E.M. lab, the MILL</li>
+  		<li>Busing to and from Millburn High School will be available complimentary to all students attending the program. Pick up and drop off location will be located near Payne Tech and/or Sussex Ave (exact location T.B.D.). A member of our team as well as an adult mentor will be at the busing location to acompany students to and from Millburn each day</li>
+  		<li>A lunch of pizza along with snacks throughout the day will be provided. We will try our best to accomodate other needs as well</li>
+  	</ul></center>
+  	<br></br>
+</div>
 
-				</center>
 
 
                 <!-- /team -->
@@ -2586,7 +2556,185 @@ header {
         <!-- /Container -->
 
     </div>
-  
+     <div id="mapa" class="section md-padding" style="margin-top:-200px">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+
+
+                <!-- Section header -->
+                            <!-- Section-header -->
+                <div class="section-header text-center">
+                    <h2 class="title">Find Us</h2>
+                </div>
+<div class="clearfix">
+	<center><p  class="seventypercent" >We are located at 462 Millburn Ave, Millburn, NJ 07041. Use the map below to see exactly where that is!</p></center>
+	<br>
+	<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+	#map {
+        width: 80%;
+      }
+    </style>
+     <center><div id="map"></div></center>
+    <script>
+      var map;
+      function resizemap(){
+      	var cw = document.getElementById('map').offsetWidth;
+        console.log(cw+"px")
+        document.getElementById('map').style.height = String(cw)+"px";
+      }
+      window.onresize = resizemap
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.720582, lng: -74.315707},
+          zoom: 15
+        });
+		resizemap()
+        var marker = new google.maps.Marker({
+        position: {lat: 40.720582, lng: -74.315707},
+        map: map,
+        title: "Millburn High School",
+    	});
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTl5duKgprdCZgkBLK0GYLtLQqjQ86qhc&callback=initMap"
+    async defer></script>
+ 
+  <br></br>
+</div>
+
+
+
+                <!-- /team -->
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    
+       
+	<!-- Contact -->
+	<div id="contact" class="section md-padding" style="margin-top:-200px">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section-header -->
+				
+				<div class="section-header text-center">
+                    <h2 class="title">Sign Up</h2>
+                </div>
+      
+
+                <div class="clearfix">
+  <center><p class="seventypercent">
+  We are closely watching the COVID-19 situation. We will provide more detailed information regarding signups when we have a greater understanding of the situation and how it will affect the viability of our current summer time schedule, and are currently exploring new time possibilities. </center>
+  <br></br>
+  <style>
+  	#googleform {
+  		border-color: #2196F3!important;
+  		color: #000!important;
+  		background-color: #e1c6f7!important;
+  		border-left: 6px solid #7c13d4!important;
+  		width:60%;
+  		height:520px;
+  		align-content: center;
+  		margin-bottom:50px;
+  	}
+  </style>
+  <!--- <center><div id="googleform"><iframe src="https://docs.google.com/formss/d/e/1FAIpQLSc6itsqis5Q_DzhZL8EMnk4Fa4Ecpxhj-JzNaD4oJWBjbjIUw/viewform?embedded=true" style="width:100%;margin-top:10px;"  frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div></center>
+</div>
+{% if submitted %}
+<script>
+	alert("Thanks for submitting a comment! We will respond to you as soon as possible!")
+	window.location.replace('/')
+</script>
+{% endif %}</---->
+
+    <div class="section md-padding" style="margin-bottom:-50px;">
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+
+
+
+                <!-- Section header -->
+                            <!-- Section-header -->
+                <div class="section-header text-center">
+                    <h2 class="title">Our Sponsors</h2>
+                </div>
+                <center>
+                	<img src='{% static "images/millburn.png" %}' alt="Millburn High School Logo" class="profile" style="width:15%;">
+                	<img src='{% static "images/essexcounty.png" %}' alt="Essex County Logo" class="profile" style="margin-right:100px;width:15%;margin-left:100px;">
+                	<img src='{% static "images/coderschool.png" %}' alt="Coder School Logo" class="profile" style="width:15%;">
+                </center>
+		<!--<center>
+			<img src='{% static "images/linode.png" %}' alt="Linode Logo" class="profile" style="width:15%;">
+		</center>-->
+
+
+                <!-- /team -->
+
+            </div>
+            <!-- /Row -->
+
+        </div>
+        <!-- /Container -->
+
+    </div>
+    <div id="nada" class="section md-padding" style="margin-top:-300px">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section-header -->
+
+                <div class="clearfix">
+                <!-- /Section-header -->
+
+                <!-- contact -->
+                <!-- /contact -->
+
+                <!-- contact -->
+
+                <!-- /contact -->
+
+                <!-- contact -->
+
+				<!-- /contact -->
+
+				<!-- contact -->
+				<!-- /contact -->
+
+
+				<!-- /contact form -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Contact -->
 
 
 
