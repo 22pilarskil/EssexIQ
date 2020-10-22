@@ -4,11 +4,12 @@ from django.http import HttpResponseRedirect
 import smtplib
 import os
 import getpass
+from datetime import datetime
 
 # Create your views here.
 
 def homeView(request):
-	print("HomeView") 
+	print("HomeView", datetime.now())
 	try:
 	 	x = request.GET['submit']
 	 	return render(request, 'home.html', {"submitted": True})
