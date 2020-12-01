@@ -1,14 +1,19 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
+{% if submitted %}
+<script>
+	alert("Thanks for submitting a comment! We will respond to you as soon as possible!")
+	window.location.replace('/')
+</script>
+{% endif %}
 <head >
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Essex IQ</title>
+	<title>EssexIQ</title>
 	<link rel = "icon" href ='{% static "images/Logo.png" %}'  
         type = "image/x-icon"> 
     <script type="text/javascript">
@@ -851,7 +856,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 .main-btn {
-    background: #6195FF;
+    background: #66728A;
     color: #FFF;
 }
 
@@ -2381,7 +2386,10 @@ header {
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-
+<style>
+	#switch{display: inline-block; margin-right: 20px;}
+	#inputbutton{width: 200px;}
+</style>
 <body>
 	<!-- Header -->
 	<header id="home">
@@ -2410,14 +2418,18 @@ header {
 				</div>
 
 				<!--  Main navigation  -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+				<!-- /Main navigation -->
+				<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 				<ul class="main-nav nav navbar-nav navbar-right" id="yeetyeet" >
-					<li><a href="/">Home</a></li>
-					<li><a href="#curriculum">Curriculum</a></li>
-					<li><a href="#logistics">Logistics</a></li>
-					<li><a href="#signup">Sign Up</a></li>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#team">Our Team</a></li>
+					<li><a href="#questions">Ask Us A Question</a></li>
+					<li><a href="#sponsors">Our Sponsors</a></li>
 				</ul>
 				<!-- /Main navigation -->
+
+			</div>
+		</nav>
 
 			</div>
 		</nav>
@@ -2430,9 +2442,17 @@ header {
 					<!-- home content -->
 					<div class="col-md-10 col-md-offset-1">
 						<div class="home-content">
-							<h1 class="white-text">Essex IQ Winter Session</h1>
-							<p class="white-text">12/28/2020 - 01/01/2021
+							<h1 class="white-text">EssexIQ</h1>
+							<p class="white-text">A programming and engineering camp designed to provide an
 							</p>
+							<p class="white-text"> engaging education, free of charge!
+							</p>
+							<form action="/winter" method="post" class="resize" id="switch"> {% csrf_token %}
+								<input class="main-btn" type="submit" id="inputbutton" value="Winter Session">
+							</form>
+							<form action="/summer" method="post" class="resize" id="switch"> {% csrf_token %}
+								<input class="main-btn" type="submit" id="inputbutton" value="Summer Session">
+							</form>
 						</div>
 					</div>
 					<!-- /home content -->
@@ -2441,6 +2461,8 @@ header {
 			</div>
 		</div>
 		<!-- /home wrapper -->
+
+
 
 	</header>
 	<!-- /Header -->
@@ -2472,10 +2494,67 @@ header {
      padding-left: 100px;
      padding-right: 50px;
 }
+.profile {
+    		width:100%;
+    		height:100%;
+    	}
+    	.names {
+    		margin-top:40px;
+    	}
     </style>
 
-    <center><img src='{% static "images/Logo.png" %}' alt="EssexIQ Logo" class="profile" style="width:20%;margin-top:100px;margin-bottom:-100px;"></center>
-    <div id="curriculum" class="section md-padding" style="margin-top:100px">
+<div id="team" class="section md-padding" style="margin-top:0px;">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">Our Team</h2>
+				</div>
+				<br>
+				<center><p  class="seventypercent" >We will be the main instructors for this summer's session. Below are short bios about each of us so you can get to know us better!</p></center>
+					<br>
+				<!-- /Section header -->
+
+				<!-- team -->
+				<div class="col-sm-4">
+					<div class="team">
+
+						<div class="team-content">
+							<img src='{% static "images/Aryan.png" %}' alt="Aryan" class="profile">
+							<h3 class="names">Aryan Dugar</h3>
+							<span>2 years as co-captain and head coder of Millburn Team 7405N, 3 years total of robotics experience, class of 2022 at Millburn High School</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="team">
+
+						<div class="team-content">
+							<img src='{% static "images/Keshab.png" %}' alt="Keshab" class="profile">
+							<h3 class="names">Keshab Gatehouse</h3>
+							<span>3 years as co-captain and head builder of Millburn Team 7405N, 6 years total of robotics experience, class of 2021 at Millburn High School</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="team">
+
+						<div class="team-content">
+							<img src='{% static "images/Liam.png" %}' alt="Liam" class="profile">
+							<h3 class="names">Liam Pilarski</h3>
+							<span>Co-lead of Millburn AI initiative, 1 year as captain and head coder of Millburn Team 7405K, class of 2022 at Millburn High School</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+<div id="questions" class="section md-padding" style="margin-bottom:-50px;">
 
         <!-- Container -->
         <div class="container">
@@ -2484,27 +2563,24 @@ header {
             <div class="row">
 
 
+
                 <!-- Section header -->
                             <!-- Section-header -->
                 <div class="section-header text-center">
-                    <h2 class="title">Curriculum</h2>
+                    <h2 class="title">Ask Us a Question!</h2>
                 </div>
-<div class="clearfix">
-  <center><p style="width:70%;text-align:left">
-  	As members of the Millburn Robotics Program (winners of the VEX Robotics 2018-2019 World Championship as well as recipients of numerous awards), we have accumulated a lot of experience in the fields of programming and engineering. However, due to Covid-19, our ability to have students physically handle robots and learn engineering concepts through practice has been greatly hampered. Nonetheless, an online model that focuses on programming is still possible, and we plan to take the opportunity presented by winter break to teach students core concepts in robotics programming using the <a href="https://www.vexrobotics.com/vexcode-vr">VEXcode VR</a> robot simulation software. Lessons will touch upon concepts including but not limited to:
-  </p><center>
-  	<br>
-  	<br>
-  	<center><ul style="width:70%;text-align:left;">
-  		<li>Block code instruction, and depending on degree of individual success with basic concepts, written code instruction using Python</li>
-  		<li>Using programming structures such as loops and conditionals to optimize code</li>
-  		<li>Precision functions such as proportional slowdown</li>
-  	</ul></center>
-  	<br>
-  	<br>
-  <br></br>
-</div>
+                <center><p class="seventypercent" style="text-align:left">If you have any questions or concerns (eg. needing clarification on camp info), feel free to fill out this contact window. Enter your email and message below so we can respond to you promptly, or just email us directly at <a href="mailto:essexiq@gmail.com">essexiq@gmail.com</a>.</p>
+                <br>
+                <br>
+                <form action="/sendmail" method="post" class="resize" id="contactform"> {% csrf_token %}
+							<input type="text" name="username" placeholder="Email" style="width:70%;margin-bottom:10px">
+							<br>
+							<textarea name="message" rows='5' form="contactform" style="width:70%" placeholder="Enter your message here" ></textarea>
+							<br>
+							<input class="main-btn" type="submit" value="Send message">
+						</form>
 
+				</center>
 
 
                 <!-- /team -->
@@ -2516,7 +2592,8 @@ header {
         <!-- /Container -->
 
     </div>
-    <div id="logistics" class="section md-padding" style="margin-top:-250px">
+  
+  <div id="sponsors" class="section md-padding" style="margin-bottom:-50px;">
 
         <!-- Container -->
         <div class="container">
@@ -2529,104 +2606,27 @@ header {
                 <!-- Section header -->
                             <!-- Section-header -->
                 <div class="section-header text-center">
-                    <h2 class="title">Logistics</h2>
+                    <h2 class="title">Our Sponsors</h2>
                 </div>
-<div class="clearfix">
-  	<center><ul style="width:70%;text-align:left;">
-  		<li>The Essex IQ Winter Session is a one week program that will be taking place from 12/28/2020 - 01/01/2021</li>
-  		<li>All meetings will take place over Zoom call in observance of social distancing guidelines</li>
-  		<li>Meetings will be 2 hours</li>
-  		<li>Just sign up and attend -- no other barriers to entry!</li>
-  	</ul></center>
-  	<br></br>
-</div>
-<div id="signup" class="section md-padding">
-
-        <!-- Container -->
-        <div class="container">
-
-            <!-- Row -->
-            <div class="row">
+                <center>
+                	<img src='{% static "images/millburn.png" %}' alt="Millburn High School Logo" class="profile" style="width:15%;">
+                	<img src='{% static "images/essexcounty.png" %}' alt="Essex County Logo" class="profile" style="margin-right:100px;width:15%;margin-left:100px;">
+                	<img src='{% static "images/coderschool.png" %}' alt="Coder School Logo" class="profile" style="width:15%;">
+                </center>
+		<!--<center>
+			<img src='{% static "images/linode.png" %}' alt="Linode Logo" class="profile" style="width:15%;">
+		</center>-->
 
 
+                <!-- /team -->
 
-                <!-- Section header -->
-                            <!-- Section-header -->
-                <div class="section-header text-center">
-                    <h2 class="title">Sign Up</h2>
-             
-                </div>
-                <center><p style="width:70%">
-  	Fill out the form below to sign up!
-  </p><center>
-<div class="clearfix">
+            </div>
+            <!-- /Row -->
 
-  	<center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd7TOJWXbqgx5PJCoKxY2nQeNq9lhrLN_dm8W8O0CvZJlUi3A/viewform?embedded=true" width="640" height="1350" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></center>
-  	<br></br>
-</div>
+        </div>
+        <!-- /Container -->
 
-    
-       
-	<!-- Contact -->
-  <style>
-  	#googleform {
-  		border-color: #2196F3!important;
-  		color: #000!important;
-  		background-color: #e1c6f7!important;
-  		border-left: 6px solid #7c13d4!important;
-  		width:60%;
-  		height:520px;
-  		align-content: center;
-  		margin-bottom:50px;
-  	}
-  </style>
-  <!--- <center><div id="googleform"><iframe src="https://docs.google.com/formss/d/e/1FAIpQLSc6itsqis5Q_DzhZL8EMnk4Fa4Ecpxhj-JzNaD4oJWBjbjIUw/viewform?embedded=true" style="width:100%;margin-top:10px;"  frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div></center>
-</div>
-{% if submitted %}
-<script>
-	alert("Thanks for submitting a comment! We will respond to you as soon as possible!")
-	window.location.replace('/')
-</script>
-{% endif %}</---->
-
-    <div id="nada" class="section md-padding" style="margin-top:-300px">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section-header -->
-
-                <div class="clearfix">
-                <!-- /Section-header -->
-
-                <!-- contact -->
-                <!-- /contact -->
-
-                <!-- contact -->
-
-                <!-- /contact -->
-
-                <!-- contact -->
-
-				<!-- /contact -->
-
-				<!-- contact -->
-				<!-- /contact -->
-
-
-				<!-- /contact form -->
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Contact -->
+    </div>
 
 
 
