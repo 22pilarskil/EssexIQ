@@ -1,1 +1,0 @@
-web: gunicorn EssexIQ.wsgi --log-file -
