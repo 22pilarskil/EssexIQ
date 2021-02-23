@@ -1,0 +1,54 @@
+{% load staticfiles%}
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<div class="site-mobile-menu">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var base = document.URL.split("#")[0];
+    document.getElementById("curriculum_link").setAttribute("href", base+"#curriculum");
+    document.getElementById("logistics_link").setAttribute("href", base+"#logistics");
+    document.getElementById("signup_link").setAttribute("href", base+"#signup");
+}, false);
+</script>
+<header class="site-navbar py-3" role="banner">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-11 col-xl-2">
+        <h1 class="mb-0"><a href="/" class="text-black h2 mb-0">Essex<span style="color:#0017ff;">IQ</span> </a></h1>
+      </div>
+      <div class="col-12 col-md-10 d-none d-xl-block">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+            <li><a href="/#home">Home</a></li>
+            <li class="has-children">
+              <a>Sessions</a>
+              <ul class="dropdown">
+                <li><a href="/spring-session">Spring 2021</a></li>
+                <li><a href="/winter-session">Winter 2021 </a></li>
+                <li><a href="/summer-session">Summer 2020 </a></li>
+              </ul>
+            </li>
+            <li><a id="curriculum_link">Curriculum</a></li>
+            <li><a id="logistics_link">Logistics</a></li>
+            <li><a id="signup_link">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+      </div>
+    </div>
+  </div>
+</header>

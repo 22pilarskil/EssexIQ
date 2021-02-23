@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> {% block title %} {% endblock title %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="/static/images/Logo.png" type="image/x-icon">
+    {% include 'main/components/header.html' %}
+  </head>
+  <body>
+
+  <div class="site-wrap">
+    {% include 'main/components/navbar_session.html' %}
+
+    {% block content %}{% endblock content %}
+
+    {% include 'main/components/footer.html' %}
+  </div>
+
+   {% include 'main/components/scripts.html' %}
+
+  </body>
+</html>
