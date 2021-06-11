@@ -57,12 +57,15 @@ def return_view(request):
         error = execute_email(request)
         return render(request, 'main/index.html', context={"error": error})
 
-    elif currentPath == "/winter-session":
-        return render(request, 'main/sessions/winter.html')
+    elif currentPath == "/summer-session-2020":
+        return render(request, 'main/sessions/summer2020.html')
 
-    elif currentPath == "/spring-session":
-        return render(request, 'main/sessions/spring.html')
+    elif currentPath == "/winter-session-2021":
+        return render(request, 'main/sessions/winter2021.html')
 
-    elif currentPath == "/summer-session":
-        print("hi")
-        return render(request, 'main/sessions/summer.html')
+    elif currentPath == "/spring-session-2021":
+        return render(request, 'main/sessions/spring2021.html')
+
+    elif currentPath == "/summer-session-2021":
+        return render(request, 'main/sessions/summer2021.html')
+
