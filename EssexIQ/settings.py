@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'clear_cache',
     'main.apps.MainConfig'
 ]
 
@@ -122,5 +123,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
 import os
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+STATIC_ROOT_ = os.path.join(BASE_DIR, "static_/")
+
+STATICFILES_DIRS = (
+    STATIC_ROOT_,
+)
+print(STATIC_ROOT)
