@@ -69,3 +69,6 @@ def return_view(request):
     elif currentPath == "/summer-session-2021":
         return render(request, 'main/sessions/summer2021.html')
 
+    elif currentPath == "/summer-session-2022":
+        return render(request, 'main/sessions/summer2022.html')
+
