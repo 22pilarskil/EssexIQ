@@ -14,6 +14,6 @@ urlpatterns = [
     path('winter-session-2021', views.return_view, name='winter2021'),
     path('spring-session-2021', views.return_view, name='spring2021'),
     path('summer-session-2021', views.return_view, name="summer2021"),
-    path('summer-session-2022', views.return_view, name="summer2022")
-
+    path('summer-session-2022', views.return_view, name="summer2022"),
+    path('summer-session-2023', views.return_view, name="summer2023"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
