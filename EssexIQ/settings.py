@@ -25,8 +25,9 @@ SECRET_KEY = '6gsp$ich3&b5r(5@58y*z26+lx6ygf9r*k0&j(ps463(sh9v7f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['essexiq.com', 'www.essexiq.com', '172.104.219.23']
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
@@ -125,9 +126,5 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 import os
-STATIC_ROOT_ = os.path.join(BASE_DIR, STATIC_URL)
+STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
 
-STATICFILES_DIRS = (
-    STATIC_ROOT_,
-)
-# print(STATIC_ROOT_, os.getcwd(), os.path.join(BASE_DIR, STATIC_URL))
