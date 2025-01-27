@@ -1,24 +1,39 @@
-{% extends "main/components/base.html" %}
-{% load static %}
-
-{% block title %} Essex IQ {% endblock title %}
-
-{% block content %}
-
+{% extends "main/components/base.html" %} {% load static %} {% block title %}
+Essex IQ {% endblock title %} {% block content %}
 
 <div id="home" class="site-section site-hero">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-8">
-        <p class="col-lg-6 mb-5 mb-lg-0 order-lg-2" data-aos="fade" data-aos-delay="100">Are you interested in learning more about programming robots or making your own games online? You've come to the right place!</p>
-        <h1 class="d-block mb-1" data-aos="fade-up" data-aos-delay="200">Welcome to Essex IQ!</h1>
-        <p class="col-lg-6 mb-5 mb-lg-0 order-lg-2" data-aos="fade" data-aos-delay="100">Find the session that works for you by navigating to the sessions section of the navbar!</p>
+        <p
+          class="col-lg-6 mb-5 mb-lg-0 order-lg-2"
+          data-aos="fade"
+          data-aos-delay="100"
+        >
+          Are you interested in learning more about programming robots or making
+          your own games online? You've come to the right place!
+        </p>
+        <h1 class="d-block mb-1" data-aos="fade-up" data-aos-delay="200">
+          Welcome to Essex IQ!
+        </h1>
+        <p
+          class="col-lg-6 mb-5 mb-lg-0 order-lg-2"
+          data-aos="fade"
+          data-aos-delay="100"
+        >
+          Find the session that works for you by navigating to the sessions
+          section of the navbar!
+        </p>
         <!-- <span class="d-block mb-2 caption" data-aos="fade-up" data-aos-delay="300"></span>
         <a href="/winter-session" class="btn-custom" data-aos="fade-up" data-aos-delay="400"><span>Winter Session</span></a>
         <a href="#" class="btn-custom" data-aos="fade-up" data-aos-delay="400"><span>Summer Session</span></a> -->
       </div>
-      <div class="col-md-4" style="margin-bottom: auto;">
-          <img src=" {% static 'images/Logo.png' %} " alt="Image" class="img-fluid">
+      <div class="col-md-4" style="margin-bottom: auto">
+        <img
+          src=" {% static 'images/Logo.png' %} "
+          alt="Image"
+          class="img-fluid"
+        />
       </div>
     </div>
   </div>
@@ -28,183 +43,324 @@
   <div class="container">
     <div class="row mb-5">
       <div class="col-lg-5">
-        <div style="margin-top:100px;" class="site-section-heading" data-aos="fade-up">
+        <div
+          style="margin-top: 100px"
+          class="site-section-heading"
+          data-aos="fade-up"
+        >
           <h2>About Us</h2>
         </div>
       </div>
-      <div class="col-lg-6 ml-auto order-lg-1" data-aos="fade-up" data-aos-delay="100">
-          <p onmouseover="mouseOver()">Essex IQ is an Essex County-based nonprofit organization dedicated to providing quality education in programming and robotics for zero charge. Our annual summer programs for rising 6th, 7th, and 8th graders give students the opportunity to build, program, and compete with their very own robots! You can find our upcoming classes as well as archived ones in the Sessions tab of the navbar.</p>
-          <div>
-          <p>Essex IQ is designed from the ground up with our students in mind. In addition to our lead instructors, we have dozens of high school mentors between our two locations, so each of our students receives thoughtful and personalized instruction. Our curriculum is also built to allow students to work at their own pace while still learning the necessary skills and knowledge to participate in our final competition.</p>
+      <div
+        class="col-lg-6 ml-auto order-lg-1"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <p onmouseover="mouseOver()">
+          Essex IQ is an Essex County-based nonprofit organization dedicated to
+          providing quality education in programming and robotics for zero
+          charge. Our annual summer programs for rising 6th, 7th, and 8th
+          graders give students the opportunity to build, program, and compete
+          with their very own robots! You can find our upcoming classes as well
+          as archived ones in the Sessions tab of the navbar.
+        </p>
+        <div>
+          <p>
+            Essex IQ is designed from the ground up with our students in mind.
+            In addition to our lead instructors, we have dozens of high school
+            mentors between our two locations, so each of our students receives
+            thoughtful and personalized instruction. Our curriculum is also
+            built to allow students to work at their own pace while still
+            learning the necessary skills and knowledge to participate in our
+            final competition.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row mb-5">
-        <div class="col-12" data-aos="fade-up" data-aos-delay="300">
-          <img src=" {% static 'images/aboutus.png' %} " alt="Image" class="img-fluid">
-        </div>
-    </div>
-</div>
-
-
-<div class="site-section" id="contactus">
-  <div class="container">
     <div class="row mb-5">
-      <div class="col-lg-4">
-        <div class="site-section-heading" data-aos="fade-up">
-          <h2>Contact Us</h2>
-        </div>
+      <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+        <img
+          src=" {% static 'images/aboutus.png' %} "
+          alt="Image"
+          class="img-fluid"
+        />
       </div>
-      <div class="col-lg-6 mt-5 pl-lg-5" data-aos="fade-up" data-aos-delay="100">
-          <p>Find more information about our team below, or contact us at <a href="mailto:EssexIQ@gmail.com" style="color:#0017ff;">EssexIQ@gmail.com</a> with any questions.</p>
-      </div>
-    </div>
-
-    <div class="col-md-8 offset-md-1">
-      <form method="POST" action="" enctype="multipart/form-data">
-        {% csrf_token %}
-        <div class="row form-group">
-          <div class="col-md-12 mb-3 mb-md-0">
-            <label class="" for="fname">First Name</label>
-            <input type="fname" name="fname" id="fname" class="form-control">
-          </div>
-
-          <div class="col-md-12">
-            <label class="" for="lname">Last Name</label>
-            <input type="lname" name="lname" id="lname" class="form-control">
-          </div>
-        </div>
-
-        <div class="row form-group">
-          <div class="col-md-12">
-            <label class="" for="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control">
-          </div>
-        </div>
-
-        <div class="row form-group">
-          <div class="col-md-12">
-            <label class="" for="subject">Subject</label>
-            <input type="subject" name="subject" id="subject" class="form-control">
-          </div>
-        </div>
-
-        <div class="row form-group">
-          <div class="col-md-12">
-            <label class="" for="message">Message</label>
-            <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
-          </div>
-        </div>
-
-        {% if error %}
-            <div class="row form-group">
-              <div class="col-md-12">
-                <button href="#" type="submit" name="submit" class="btn-custom btn-danger" data-aos="fade-up" data-aos-delay="400"><span>There was an error in your form</span></button>
-              </div>
-            </div>
-        {% else %}
-            <div class="row form-group">
-              <div class="col-md-12">
-                <button href="#" type="submit" name="submit" class="btn-custom" data-aos="fade-up" data-aos-delay="400"><span>Submit</span></button>
-              </div>
-            </div>
-        {% endif %}
-
-      </form>
     </div>
   </div>
-</div>
 
+  <div class="site-section" id="contactus">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-4">
+          <div class="site-section-heading" data-aos="fade-up">
+            <h2>Contact Us</h2>
+          </div>
+        </div>
+        <div
+          class="col-lg-6 mt-5 pl-lg-5"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <p>
+            Find more information about our team below, or contact us at
+            <a href="mailto:EssexIQ@gmail.com" style="color: #0017ff"
+              >EssexIQ@gmail.com</a
+            >
+            with any questions.
+          </p>
+        </div>
+      </div>
 
-<!-- <div class="site-section" data-aos="fade">
+      <div class="col-md-8 offset-md-1">
+        <form method="POST" action="" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="row form-group">
+            <div class="col-md-12 mb-3 mb-md-0">
+              <label class="" for="fname">First Name</label>
+              <input
+                type="fname"
+                name="fname"
+                id="fname"
+                class="form-control"
+              />
+            </div>
+
+            <div class="col-md-12">
+              <label class="" for="lname">Last Name</label>
+              <input
+                type="lname"
+                name="lname"
+                id="lname"
+                class="form-control"
+              />
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="" for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+              />
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="" for="subject">Subject</label>
+              <input
+                type="subject"
+                name="subject"
+                id="subject"
+                class="form-control"
+              />
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label class="" for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="7"
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+
+          {% if error %}
+          <div class="row form-group">
+            <div class="col-md-12">
+              <button
+                href="#"
+                type="submit"
+                name="submit"
+                class="btn-custom btn-danger"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <span>There was an error in your form</span>
+              </button>
+            </div>
+          </div>
+          {% else %}
+          <div class="row form-group">
+            <div class="col-md-12">
+              <button
+                href="#"
+                type="submit"
+                name="submit"
+                class="btn-custom"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <span>Submit</span>
+              </button>
+            </div>
+          </div>
+          {% endif %}
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="site-section" data-aos="fade">
   <div class="container">
     <div class="row mb-5 justify-content-center">
       <div class="col-lg-4 mb-5">
         <div class="site-section-heading"> -->
-<div class="site-section" id="aboutus">
-  <div class="container">
-    <div class="row mb-5">
-      <div class="col-lg-5">
-        <div class="site-section-heading" data-aos="fade-up">
-          <h2>Meet our organizers!</h2>
+  <div class="site-section" id="aboutus">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-5">
+          <div class="site-section-heading" data-aos="fade-up">
+            <h2>Meet our organizers!</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-one-item home-slider owl-carousel">
+        <div class="row justify-content-center">
+          <div class="testimony text-center col-md-5">
+            <figure>
+              <img
+                src=" {% static 'images/KeshabGatehouse.png' %} "
+                alt="Image"
+                class="img-fluid"
+              />
+            </figure>
+            <blockquote>
+              <p class="author">Keshab Gatehouse &mdash; Founder</p>
+            </blockquote>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="testimony text-center col-md-5">
+            <figure>
+              <img
+                src=" {% static 'images/AaravDugar.png' %} "
+                alt="Image"
+                class="img-fluid"
+              />
+            </figure>
+            <blockquote>
+              <p class="author">Aarav Dugar &mdash; President</p>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="testimony text-center col-md-5">
+            <figure>
+              <img
+                src=" {% static 'images/IshaanSatish.png' %} "
+                alt="Image"
+                class="img-fluid"
+              />
+            </figure>
+            <blockquote>
+              <p class="author">Ishaan Satish &mdash; Vice President</p>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="testimony text-center col-md-5">
+            <figure>
+              <img
+                src=" {% static 'images/YuviChoudhary.png' %} "
+                alt="Image"
+                class="img-fluid"
+              />
+            </figure>
+            <blockquote>
+              <p class="author">Yuvi Choudhary &mdash; Vice President</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-lg-4">
+              <div class="site-section-heading" data-aos="fade-up">
+                <h2>Sponsors</h2>
+              </div>
+            </div>
+            <div
+              class="col-lg-6 mt-5 pl-lg-5"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <p>
+                Thank you so much to each of our sponsors! If you are interested
+                in becoming a sponsor, please fill out a contact form and we
+                will be in touch with you shortly!
+              </p>
+            </div>
+          </div>
+          <div class="row mb-5">
+            <div
+              class="col-md-4 col-lg-4 mb-5 mb-lg-0"
+              data-aos="fade"
+              data-aos-delay="200"
+            >
+              <img
+                width="200"
+                height="200"
+                src=" {% static 'images/coderschool.png' %} "
+                alt="Image"
+                class="img-sponsor"
+              />
+            </div>
+            <div
+              class="col-md-4 col-lg-4 mb-5 mb-lg-0"
+              data-aos="fade"
+              data-aos-delay="300"
+            >
+              <img
+                width="200"
+                height="200"
+                src=" {% static 'images/essexcounty.png' %} "
+                alt="Image"
+                class="img-sponsor"
+              />
+            </div>
+            <div
+              class="col-md-4 col-lg-4 mb-5 mb-lg-0"
+              data-aos="fade"
+              data-aos-delay="400"
+            >
+              <img
+                width="200"
+                height="200"
+                src=" {% static 'images/millburn.png' %} "
+                alt="Image"
+                class="img-sponsor"
+              />
+            </div>
+          </div>
+
+          <div class="row" data-aos="fade-up" data-aos-delay="500">
+            <div class="col-12 text-center pt-5">
+              <a
+                href="#contactus"
+                class="btn-custom"
+                data-aos="fade-up"
+                data-aos-delay="800"
+                ><span>Be a Sponsor</span></a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-
-    <div class="slide-one-item home-slider owl-carousel">
-
-<div class="row justify-content-center">
-    <div class="testimony text-center col-md-5">
-      <figure>
-        <img src=" {% static 'images/Keshab.png' %} " alt="Image" class="img-fluid">
-      </figure>
-      <blockquote>
-<!--         <p>&ldquo;2 years as head builder of Millburn Team 8405 and 23650, currantly 2 years total of robotics experience, class of 2026 at Millburn High School&rdquo;</p> -->
-        <p class="author">Shreeyam Gopalan &mdash; President</p>
-      </blockquote>
-    </div>
   </div>
-  <div class="row justify-content-center">
-
-    <div class="testimony text-center col-md-5">
-      <figure>
-        <img src=" {% static 'images/PNG.jpg' %} " alt="Image" class="img-fluid">
-      </figure>
-      <blockquote>
-<!--         <p>&ldquo;3 years of vex experiance on Millburn Team 7405N, 7 years total of robotics experience, class of 2025 at Millburn High School&rdquo;</p> -->
-        <p class="author">Aarav Dugar &mdash; President</p>
-      </blockquote>
-    </div>
-  </div>
-
-  <div class="row justify-content-center">
-   <div class="testimony text-center col-md-5">
-      <figure>
-        <img src=" {% static 'images/Liam.png' %} " alt="Image" class="img-fluid">
-      </figure>
-      <blockquote>
-<!--         <p>&ldquo;Co-lead of Millburn AI initiative, 1 year as captain and head coder of Millburn Team 7405K, class of 2022 at Millburn High School &rdquo;</p> -->
-        <p class="author">Liam Pilarski &mdash; Senior President</p>
-      </blockquote>
-    </div>
-  </div>
-
-</div>
-
-
-<div class="site-section">
-  <div class="container">
-    <div class="row mb-5">
-      <div class="col-lg-4 ">
-        <div class="site-section-heading" data-aos="fade-up">
-          <h2>Sponsors</h2>
-        </div>
-      </div>
-      <div class="col-lg-6 mt-5 pl-lg-5" data-aos="fade-up" data-aos-delay="100">
-        <p>Thank you so much to each of our sponsors! If you are interested in becoming a sponsor, please fill out a contact form and we will be in touch with you shortly!</p>
-      </div>
-    </div>
-    <div class="row mb-5">
-      <div class="col-md-4 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-        <img width="200" height="200" src=" {% static 'images/coderschool.png' %} " alt="Image" class="img-sponsor">
-      </div>
-      <div class="col-md-4 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="300">
-        <img width="200" height="200" src=" {% static 'images/essexcounty.png' %} " alt="Image" class="img-sponsor">
-      </div>
-      <div class="col-md-4 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="400">
-        <img width="200" height="200" src=" {% static 'images/millburn.png' %} " alt="Image" class="img-sponsor">
-      </div>
-    </div>
-
-    <div class="row" data-aos="fade-up" data-aos-delay="500">
-      <div class="col-12 text-center pt-5">
-        <a href="#contactus" class="btn-custom" data-aos="fade-up" data-aos-delay="800"><span>Be a Sponsor</span></a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
 </div>
 {% endblock %}
