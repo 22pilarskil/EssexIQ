@@ -83,9 +83,9 @@ DATABASES = {
         'NAME': str(BASE_DIR / "db.sqlite3"),
     }
 }
+# DATABASES = {}
 
-
-
+ALLOWED_HOSTS = ['*']
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -126,5 +126,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 import os
-STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
 
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, STATIC_URL) ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
